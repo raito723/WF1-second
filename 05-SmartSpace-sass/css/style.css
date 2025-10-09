@@ -73,6 +73,9 @@ img {
 .gnav__item {
   font-weight: bold;
 }
+.gnav .now {
+  color: #FF9900;
+}
 
 /* spaces */
 .spaces {
