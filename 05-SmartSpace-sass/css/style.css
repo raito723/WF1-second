@@ -1,0 +1,153 @@
+body {
+  color: #31353B;
+  font-size: 15px;
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.7333333333;
+  letter-spacing: 0.02em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+/* common
+-------------------*/
+.unit__catch {
+  margin-bottom: 20px;
+  color: #FF9900;
+  font-size: 18px;
+  line-height: 1.6666666667;
+  font-weight: bold;
+}
+.unit__title {
+  margin-bottom: 40px;
+  color: #000;
+  font-size: 48px;
+  line-height: 1.2083333333;
+}
+.unit__content {
+  margin-bottom: 60px;
+}
+.unit :last-child {
+  margin-bottom: 0;
+}
+
+.btn {
+  display: block;
+  width: 200px;
+  color: #fff;
+  background-color: #F85A47;
+  padding: 20px 33px;
+  border-radius: 20px;
+}
+
+/* index.html
+-------------------*/
+.header {
+  margin: 50px 0 80px;
+}
+.header__inner {
+  max-width: 1000px;
+  width: 88%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.header__logo {
+  font-size: 24px;
+  color: #31353B;
+  line-height: 1;
+  letter-spacing: 0.02;
+}
+
+.gnav__list {
+  display: flex;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  justify-content: flex-end;
+  margin-bottom: 40px;
+}
+.gnav__item {
+  font-weight: bold;
+}
+
+/* spaces */
+.spaces {
+  padding-bottom: 120px;
+}
+.spaces__inner {
+  max-width: 1000px;
+  width: 88%;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: 440fr 500fr;
+  -moz-column-gap: 6%;
+       column-gap: 6%;
+  align-items: center;
+}
+
+/* reviews */
+.reviews {
+  padding-bottom: 120px;
+}
+.reviews__inner {
+  max-width: 1000px;
+  width: 88%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.reviews__info {
+  margin-bottom: 40px;
+}
+.reviews__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -moz-column-gap: 6%;
+       column-gap: 6%;
+}
+
+/* card */
+.card {
+  padding: 45px 40px;
+  border: 1px solid #A3A3A3;
+  border-radius: 20px;
+}
+.card__content {
+  margin-bottom: 40px;
+}
+
+.customer {
+  display: flex;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+.customer__name {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* footer */
+.footer {
+  text-align: right;
+  background-color: #DBFFFF;
+  padding: 100px 0;
+}
+.footer__inner {
+  max-width: 1000px;
+  width: 88%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer__copy {
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 2.1666666667;
+}
+
+/* about.html
+-------------------*/
+/*# sourceMappingURL=style.css.map */

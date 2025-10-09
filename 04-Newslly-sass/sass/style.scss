@@ -1,0 +1,234 @@
+@use 'sass:math';
+
+$color-text: #888888;
+$color-accent: #fa6980;
+$color-main: #202124;
+$color-bg: #f6f6f6;
+$color-cips: #BBBBBB;
+$font-family-base: Helvetica,
+    Arial,
+    sans-serif;
+
+@mixin inner($my: 800px, $w: 88%) {
+    max-width: $my;
+    width: $w;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin title-main() {
+    font-size: 24px;
+    font-weight: bold;
+    color: $color-main;
+    line-height: math.div(31, 24);
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    border-left: 10px solid $color-accent;
+    padding-left: 10px;
+}
+
+@mixin title-sub {
+    font-size: 18px;
+    color: $color-main;
+    line-height: math.div(23, 18);
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+
+
+body {
+    color: $color-text;
+    font-size: 14px;
+    font-family: $font-family-base;
+    line-height: math.div(24, 14);
+    letter-spacing: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+.btn {
+    display: block;
+    width: 160px;
+    padding: 15px;
+    background-color: $color-accent;
+    color: #fff;
+    font-weight: bold;
+    line-height: math.div(20, 12);
+    text-align: center;
+
+    &__info {
+        background-color: $color-main;
+    }
+
+    &:hover {
+        background-color: $color-text;
+    }
+}
+
+.time {
+    color: $color-cips;
+    font-size: 12px;
+    line-height: math.div(20, 12);
+    background-image: url(../images/icon_time.png)no-repeat left center;
+    margin-top: 20px;
+    padding-left: 26px;
+}
+
+/* common ------------------------------*/
+
+.header {
+    padding: 30px 0 60px;
+    text-align: center;
+
+    &__inner {
+        @include inner()
+    }
+}
+
+.footer {
+    margin: 100px 0 40px;
+    background-color: $color-main;
+    color: #bbb;
+
+    &__inner {
+        @include inner()
+    }
+
+    &__copy {
+        font-size: 12px;
+    }
+}
+
+.post {
+    &__category {
+        font-size: 12px;
+        color: $color-accent;
+        line-height: math.div(20, 12);
+        font-style: oblique;
+        margin-bottom: 10px;
+    }
+
+    &__title {
+        @include title-sub()
+    }
+}
+
+.card {
+    background-color: #fff;
+
+    &__body {
+        padding: 35px;
+    }
+
+    &__title {
+        @include title-sub()
+    }
+}
+
+/* single---------*/
+
+.news {
+    padding: 0 0 60px;
+
+    &__inner {
+        @include inner();
+    }
+
+    &__title {
+        @include title-main()
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        //column-gap: 40px;
+        //row-gap: 60px;
+        gap: 60px percentage(math.div(40, 800));
+    }
+}
+
+
+.trending {
+    padding: 60px 0;
+    background-color: $color-bg;
+
+    &__inner {
+        @include inner();
+    }
+
+    &__title {
+        @include title-main();
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px percentage(math.div(40, 800));
+    }
+
+    &__item {
+        .btn {
+            margin-left: auto;
+        }
+    }
+}
+
+
+// about.html
+
+/* .blog */
+.blog {
+    padding: 0 0 60px;
+
+    &__inner {
+        @include inner()
+    }
+
+    &__list {
+        display: grid;
+        row-gap: 40px;
+    }
+
+    &__item {
+        .btn {
+            margin-left: auto;
+        }
+    }
+}
+
+.discovery {
+    padding: 60px 0;
+
+    &__inner {
+        @include inner()
+    }
+
+    &__title {
+        @include title-main()
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3)1fr;
+        gap: 60px perdentage(math.div(40, 800));
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+div {}

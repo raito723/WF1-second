@@ -1,0 +1,177 @@
+@use 'sass:math';
+
+$color-text: #31353B;
+$color-main: #FF9900;
+$color-accent: #F85A47;
+$color-heading: #000;
+$color-bg: #DBFFFF;
+
+$font-family-base: Helvetica, Arial, sans-serif;
+
+@mixin inner($mw: 1000px, $w: 88%) {
+    max-width: $mw;
+    width: $w;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    color: $color-text;
+    font-size: 15px;
+    font-family: $font-family-base;
+    line-height: math.div(26, 15);
+    letter-spacing: #{math.div(20, 1000)}em;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+/* common
+-------------------*/
+.unit {
+    &__catch {
+        margin-bottom: 20px;
+        color: $color-main;
+        font-size: 18px;
+        line-height: math.div(30, 18);
+        font-weight: bold;
+    }
+
+    &__title {
+        margin-bottom: 40px;
+        color: $color-heading;
+        font-size: 48px;
+        line-height: math.div(58, 48);
+    }
+
+    &__content {
+        margin-bottom: 60px;
+    }
+
+    :last-child {
+        margin-bottom: 0;
+    }
+}
+
+.btn {
+    display: block;
+    width: 200px;
+    color: #fff;
+    background-color: $color-accent;
+    padding: 20px 33px;
+    border-radius: 20px;
+
+}
+
+/* index.html
+-------------------*/
+.header {
+    margin: 50px 0 80px;
+
+    &__inner {
+        @include inner();
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        font-size: 24px;
+        color: $color-text;
+        line-height: math.div(24, 24);
+        letter-spacing: math.div(20, 1000);
+    }
+}
+
+.gnav {
+    &__list {
+        display: flex;
+        column-gap: 30px;
+        justify-content: flex-end;
+        margin-bottom: 40px;
+    }
+
+    &__item {
+        font-weight: bold;
+    }
+
+
+}
+
+/* spaces */
+.spaces {
+    padding-bottom: 120px;
+
+    &__inner {
+        @include inner();
+        display: grid;
+        grid-template-columns: 440fr 500fr;
+        column-gap: percentage(math.div(60, 1000));
+        align-items: center;
+    }
+}
+
+/* reviews */
+.reviews {
+    padding-bottom: 120px;
+
+    &__inner {
+        @include inner();
+    }
+
+    &__info {
+        margin-bottom: 40px;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: percentage(math.div(60, 1000));
+    }
+}
+
+/* card */
+.card {
+    padding: 45px 40px;
+    border: 1px solid #A3A3A3;
+    border-radius: 20px;
+
+    &__content {
+        margin-bottom: 40px;
+    }
+}
+
+.customer {
+    display: flex;
+    column-gap: 20px;
+
+    &__name {
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+}
+
+/* footer */
+.footer {
+    text-align: right;
+    background-color: $color-bg;
+    padding: 100px 0;
+
+    &__inner {
+        @include inner();
+    }
+
+    &__copy {
+        font-size: 12px;
+        font-weight: bold;
+        line-height: math.div(26, 12);
+    }
+}
+
+
+
+
+/* about.html
+-------------------*/
