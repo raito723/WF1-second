@@ -1,0 +1,134 @@
+@use 'sass:math';
+
+$color-text: #000;
+$color-main: #2F2F2F;
+$color-accent: #E40465;
+$color-bg: #F4F4F4;
+
+$font-family-base: arial;
+
+$font-family-english: Helvetica,
+    Arial,
+    sans-serif;
+
+$breakpoints: (
+    "desktop":640px,
+    "large":1200px,
+);
+
+@mixin mq($breakpoint) {
+    @media(#{map-get($breakpoints,$breakpoint)} <=width) {
+        @content;
+    }
+}
+
+@mixin inner($mw: 100px, $w: 87.5%) {
+    min-width: $mw;
+    width: $w;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@mixin category() {
+    color: $color-text;
+    font-size: 14px;
+    font-family: $font-family-english;
+    line-height: math.div(14, 14);
+    letter-spacing: #{math.div(50,1000)}em;
+
+}
+
+@mixin title() {
+    color: $color-text;
+    font-size: 32px;
+    font-family: $font-family-base;
+    line-height: math.div(54, 32);
+    letter-spacing: #{math.div(50,1000)}em;
+    margin-bottom: 60px;
+}
+
+body {
+    color: $color-text;
+    font-size: 14px;
+    font-family: $font-family-base;
+    line-height: math.div(24, 14);
+    letter-spacing: #{math.div(50,1000)}em;
+}
+
+.img {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+
+// header
+.header {
+    padding: 40px 0;
+
+    &__inner {
+        @include inner();
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__title {
+        font-size: 24px;
+        font-family: $font-family-english;
+        font-weight: bold;
+        line-height: math.div(29, 24);
+        letter-spacing: #{math.div(100,1000)}em;
+    }
+}
+
+.groval {
+    color: $color-text;
+    font-size: 12px;
+    font-family: $font-family-base;
+    line-height: math.div(14, 12);
+    letter-spacing: #{math.div(50,1000)}em;
+
+    &__list {
+        display: flex;
+        column-gap: 30px;
+        align-items: center;
+    }
+
+    &__item:nth-child(1) {
+        color: $color-accent;
+    }
+}
+
+// main
+.main {
+    &__inner {
+        @include inner();
+    }
+
+    &__caption {
+        display: block;
+        background: url(../images/pic_main_lg.png)no-repeat center center/cover;
+
+    }
+}
+
+.phirosophy {
+    &__inner {
+        @include inner();
+    }
+
+    &__category {
+        @include category();
+    }
+
+    &__title {
+        @include title();
+    }
+}
+
+.works {
+    &__inner {
+        @include inner();
+    }
+}

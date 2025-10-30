@@ -1,0 +1,100 @@
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cubehaus</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/the-new-css-reset/css/reset.min.css" />
+    <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__inner">
+            <h1 class="header__title">CUBE HAUS</h1>
+            <nav class="header__menu groval">
+                <ul class="groval__list">
+                    <li class="groval__item"><a href="#">COMPANY</a></li>
+                    <li class="groval__item"><a href="#">MISSION</a></li>
+                    <li class="groval__item"><a href="#">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="main__inner">
+            <picture>
+                <source media="(width >= 640px)" srcset="./images/pic_main_lg">
+                <source media="(width < 640px)" srcset="./images/pic_main_sm">
+                <img src="./images/pic_main_sm.png" alt="">
+            </picture>
+        </div>
+        <section class="phirosophy">
+            <div class="phirosophy__inner">
+                <p class="phirosophy__category">PHILOSOPHY</p>
+                <h2 class="phirosophy__title">経営理念</h2>
+                <p class="phirosophy__text">日々の喧騒から解放される静かな空間で、<br class="br-sp">
+                    自分らしい豊かな時間をお過ごしください。<br>
+                    私たちが大切にしているのは、暮らしの本質を見つめ、<br class="br-sp">
+                    家族との対話に心から集中できる、<br>
+                    洗練された「器」としての家をご提供することです。</p>
+                <p class="phirosophy__text">優れたデザインは、何気ない日常を<br class="br-sp">
+                    より豊かで特別なものに変える力があります。<br>
+                    皆様の人生という物語の素敵な舞台となれることを、<br class="br-sp">
+                    心より願っております。</p>
+            </div>
+        </section>
+        <section class="works">
+            <div class="works__inner">
+                <p class="works__category">WORKS</p>
+                <h2 class="works__title">制作実績</h2>
+                <article class="works__posts post">
+                    <img src="./images/pic_works01.png" alt="" class="post">
+                    <h3 class="post__title">光と風の抜ける家</h3>
+                    <p class="post__text">白を基調としたミニマルな空間。大きな窓から光が差し込む、開放感あふれる住まい。</p>
+                </article>
+                <article class="works__posts post">
+                    <img src="./images/pic_works02.png" alt="" class="post">
+                    <h3 class="post__title">空と繋がるコートハウス</h3>
+                    <p class="post__text">プライバシーを守りながら、空を独り占めできる中庭。家族の時間が豊かになる設計。</p>
+                </article>
+            </div>
+        </section>
+        <section class="voice">
+            <p class="voice__category">VOICE</p>
+            <h2 class="voice__title">お客様の声</h2>
+            <article class="voice__post customer">
+                <p class="customer__text">
+                    無駄のない洗練されたデザインに惹かれ、CUBE
+                    HAUSさんにお願いしました。見た目の美しさだけでなく、生活動線が考え抜かれていて本当に快適です。新しい家で過ごす家族の時間が増え、何気ない毎日がとても豊かになりました。
+                </p>
+                <div class="customer__info prof">
+                    <img src="./images/pic_customer01.png" alt="" class="prof__icon">
+                    <div class="prof__info">
+                        <p>株式会社クオリアーク</p>
+                        <p>鈴木 雄大 様</p>
+                    </div>
+                </div>
+            </article>
+            <article class="voice__post customer">
+                <p class="customer__text">
+                    事務所の移転に伴い、理念を体現する建物を探していました。こちらの要望を深く理解し、想像以上の空間を提案してくれました。機能的で美しい仕事場は、社員の創造性を刺激し、会社の新たな魅力になっています。
+                </p>
+                <div class="customer__info prof">
+                    <img src="./images/pic_customer02.png" alt="" class="prof__icon">
+                    <div class="prof__info">
+                        <p>株式会社フォルネクサス</p>
+                        <p>中村 美咲 様</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer___inner"></div>
+
+    </footer>
+</body>
